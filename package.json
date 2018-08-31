@@ -9,13 +9,15 @@
     "copy": "mkdir -p dist && cp src/index.html dist/ && cp -r src/css dist/ && cp -r src/js dist/ && cp -r src/fonts dist/ && cp -r src/images dist/ && cp CNAME dist",
     "build": "npm run clean && npm run build-css && npm run copy",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "dev": "nodemon ./index.js"
   },
   "author": "kryptoknow",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
+    "express": "^4.16.3",
     "gh-pages": "^1.2.0",
+    "http-server": "^0.11.1",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.4"
   }
