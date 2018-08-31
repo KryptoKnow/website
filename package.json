@@ -1,0 +1,22 @@
+{
+  "name": "kryptoknow",
+  "version": "1.0.0",
+  "description": "The kryptoknow website",
+  "scripts": {
+    "clean": "rm -Rf ./dist",
+    "build-css": "node-sass --include-path scss src/scss/main.scss dist/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "copy": "mkdir -p dist && cp src/index.html dist/ && cp -r src/css dist/ && cp -r src/js dist/ && cp -r src/fonts dist/ && cp -r src/images dist/",
+    "build": "npm run clean && npm run build-css && npm run copy",
+    "pre-deploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "kryptoknow",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.4"
+  }
+}
