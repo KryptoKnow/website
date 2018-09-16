@@ -239,6 +239,10 @@ a {
   width: 75px;
   display: inline; }
 
+.pricing-contact {
+  font-size: 34px !important;
+  min-height: 97px; }
+
 body {
   position: relative;
   color: #222222; }
@@ -416,6 +420,10 @@ a {
 .owl-carousel .owl-item .citation img {
   width: 75px;
   display: inline; }
+
+.pricing-contact {
+  font-size: 34px !important;
+  min-height: 97px; }
 
 .btn {
   text-transform: uppercase;
